@@ -37,7 +37,7 @@
 
     <div id="reservation-form-container" class="animated-heading">
         <h1 class="sub-heading font-pacifico">Book Your table now!</h1>
-        <form action="javascript:void(0);" method="get">
+        <form action="javascript:void(0);" method="get" autocomplete="off">
             <div class="form-row">
                 <div class="form-element">
                     <label for="date">Date</label><br>
@@ -99,15 +99,15 @@
                     <input type="email" name="email" id="email" required>
                 </div>
             </div>
-            <button id="submit">BOOK</button>
+            <button id="submit" onclick="hideForm()">BOOK</button>
         </form>
+        <div id="message-container" class="box-shadow">
+            <h1 class="font-montserrat">
+                ${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!
+            </h1>
+            <button><a href="./reservation.html" id="book-again">BOOK AGAIN</a></button>
+        </div>
     </div>
-
-    <!-- <div id="message-container">
-        <h1 class="font-montserrat">
-            ${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!
-        </h1>
-    </div> -->
 
     <div class="booking-container size-up s-up">
         <div>
@@ -143,14 +143,21 @@
             myFunction(x);
         });
 
-        function makeForm() {
+        function hideForm() {
             let date = document.getElementById("date").value;
             let time = document.getElementById("time").value;
             let people = document.getElementById("people").value > 1 ? `${document.getElementById("people").value} people` : `${document.getElementById("people").value} person`;
             let name = document.getElementById("name").value;
-            let message = `${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!`;
-            // document.getElementById("message-container").querySelector("h1").innerHTML = message;
-            console.log(message);
+            let phone = document.getElementById("phone").value;
+            let email = document.getElementById("email").value;
+            if(name && people && date && time && phone && email) {
+                let message = `${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!`;
+                console.log(message);
+                document.getElementById("message-container").querySelector("h1").innerHTML = message;
+                document.getElementById("reservation-form-container").querySelector("form").classList.add("hide-form");
+                document.getElementById("reservation-form-container").querySelector("h1").classList.add("hide-form");
+                document.getElementById("message-container").classList.add("show-message");
+            }
         }
     </script>
 </body>
