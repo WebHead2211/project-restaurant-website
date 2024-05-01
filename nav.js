@@ -1,6 +1,6 @@
 function navBarBg() {
-  var nav = document.querySelector("#nav-container");
-  var currentHeight = window.scrollY;
+  let nav = document.querySelector("#nav-container");
+  let currentHeight = window.scrollY;
   if (currentHeight > 30) {
     nav.classList.add("nav-bg");
   } else {
@@ -27,11 +27,11 @@ if (hamburger.classList.contains("active")) {
 
 
 function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+  let reveals = document.querySelectorAll(".reveal");
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
     if (elementTop < windowHeight - 100) {
       reveals[i].classList.add("revealed");
     } else {

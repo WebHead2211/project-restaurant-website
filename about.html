@@ -39,12 +39,7 @@
     <div class="story-container animated-heading">
         <h2 class="font-pacifico about-h2">Urban Bites</h2>
         <h1 class="font-montserrat about-h1">Our Story</h1>
-        <p class="font-montserrat about-p">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-            pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam
-            purus purus, lacinia a scelerisque in, luctus vel felis. Donec odio diam, dignissim a efficitur at,
-            efficitur et est. Pellentesque semper est ut pulvinar ullamcorper. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Nulla et leo accumsan, egestas velit ac, fringilla
-            tortor. Sed varius justo sed luctus mattis.</p>
+        <p class="font-montserrat about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
     <div class="video-container">
@@ -68,9 +63,7 @@
         <div class="about-tab reveal fade-in">
             <h2 class="font-pacifico about-h2">Delicious</h2>
             <h1 class="font-montserrat about-h1">Recipes</h1>
-            <p class="font-montserrat about-p">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-                pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam
-                purus purus, lacinia a scelerisque in, luctus vel felis.</p>
+            <p class="font-montserrat about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="about-tab about-tab-img reveal fade-left">
             <div class="about-image">
@@ -88,9 +81,7 @@
         <div class="about-tab reveal fade-in">
             <h2 class="font-pacifico about-h2">Beautiful</h2>
             <h1 class="font-montserrat about-h1">Location</h1>
-            <p class="font-montserrat about-p">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-                pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam
-                purus purus, lacinia a scelerisque in, luctus vel felis.</p>
+            <p class="font-montserrat about-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
     </div>
@@ -108,8 +99,7 @@
                 </div>
                 <h1 class="font-montserrat">Adelyn Sampson</h1>
                 <h2 class="font-montserrat">Chef</h2>
-                <p class="font-montserrat">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-                    pretium. Orci varius natoque penatibus et magnis dis parturient montes</p>
+                <p class="font-montserrat">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             <div class="chef-tab reveal fade-in">
                 <div class="wrapper">
@@ -117,8 +107,7 @@
                 </div>
                 <h1 class="font-montserrat">Marilyn Conrad</h1>
                 <h2 class="font-montserrat">Chef</h2>
-                <p class="font-montserrat">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-                    pretium. Orci varius natoque penatibus et magnis dis parturient montes</p>
+                <p class="font-montserrat">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
             <div class="chef-tab reveal fade-in">
                 <div class="wrapper">
@@ -126,8 +115,7 @@
                 </div>
                 <h1 class="font-montserrat">Peter Hart</h1>
                 <h2 class="font-montserrat">Chef</h2>
-                <p class="font-montserrat">Fusce at risus eget mi auctor pulvinar. Suspendisse maximus venenatis
-                    pretium. Orci varius natoque penatibus et magnis dis parturient montes</p>
+                <p class="font-montserrat">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
             </div>
         </div>
     </div>
@@ -146,6 +134,10 @@
 
         function showVideo() {
             videoContainer.classList.toggle("video-show");
+            let iframe = document.querySelector("iframe");
+            iframe.setAttribute("src", "https://www.youtube.com/embed/78ixbqwFLbc?si=JrwrsAmFD2zyGnLK");
+            let body = document.querySelector("body");
+            body.classList.toggle("active-video");
         }
     </script>
 </body>

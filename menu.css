@@ -4,7 +4,7 @@
 
 .menu-heading {
     text-align: center;
-    padding-top: 60px;
+    padding: 60px;
 }
 
 .menu-img {
@@ -69,6 +69,15 @@
     margin-bottom: 50px;
     position: relative;
     z-index: -1;
+}
+
+.menu-scroll {
+    height: 20vh;
+    width: 20px;
+    background-color: red;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
 }
 
 @keyframes fade-left {
