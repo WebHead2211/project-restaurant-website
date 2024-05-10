@@ -123,6 +123,10 @@
         margin: 0;
     }
 
+    .menu-container:last-child {
+        margin-bottom: 50px;
+    }
+
     .menu-item-container {
         text-align: center;
         position: relative;

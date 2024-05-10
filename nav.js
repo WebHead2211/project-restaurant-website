@@ -32,7 +32,7 @@ function reveal() {
   for (let i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
-    if (elementTop < windowHeight - 100) {
+    if (elementTop < windowHeight) {
       reveals[i].classList.add("revealed");
     } else {
       reveals[i].classList.remove("revealed");

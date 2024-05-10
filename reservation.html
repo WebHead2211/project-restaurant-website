@@ -118,8 +118,7 @@
         <button id="submit">BOOK</button>
       </form>
       <div id="message-container" class="box-shadow">
-        <h1 class="font-montserrat">
-        </h1>
+        <h1 class="font-montserrat"></h1>
         <button>
           <a href="./reservation.html" id="book-again">BOOK AGAIN</a>
         </button>
@@ -144,6 +143,21 @@
     <script src="./nav.js"></script>
     <script>
       $(document).ready(function () {
+        let today = new Date();
+
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let date = today.getDate();
+        if(date < 10) {
+          date = `0${date}`;
+        }
+        if(month < 10) {
+          month = `0${month}`;
+        }
+        let dateStr = `${year}-${month}-${date}`;
+        $("#date").attr("min", dateStr);
+
+
         $("#submit").click(function () {
           let date = $("#date").val();
           let time = $("#time").val();
@@ -154,16 +168,22 @@
           let name = $("#name").val();
           let phone = $("#phone").val();
           let email = $("#email").val();
-          if (name && people && date && time && phone && email) {
-            let message = `${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!`;
-            $("#message-container h1").text(message);
-            $("#reservation-form-container form").addClass("hide-form");
-            $("#reservation-form-container .sub-heading").addClass("hide-form");
-            $("#message-container").addClass("show-message");
+          if(validateEmail(email)){
+            if (name && people && date && time && phone && email && phone.length == 10) {
+              let message = `${name}, Your reservation on date ${date} for ${people} is confirmed. Have a great time!`;
+              $("#message-container h1").text(message);
+              $("#reservation-form-container form").addClass("hide-form");
+              $("#reservation-form-container .sub-heading").addClass("hide-form");
+              $("#message-container").addClass("show-message");
+            }
           }
         });
       });
+
+      const validateEmail = (email) => {
+        let re = /^[^\s@]+@[^\s@]+/;
+        return re.test(email);
+      };
     </script>
   </body>
 </html>
-
