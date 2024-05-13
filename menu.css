@@ -123,8 +123,8 @@
         margin: 0;
     }
 
-    .menu-container:last-child {
-        margin-bottom: 50px;
+    .menu-container:last-of-type {
+        margin-bottom: 60px;
     }
 
     .menu-item-container {
